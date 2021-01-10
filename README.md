@@ -20,3 +20,5 @@ Merged two head-convs of the CSP to speed.
 created yolov5-tiny is better than yolov4-tiny: # paper url #
 
 Thanks to correct my mistakes！
+
+copyright@all!
