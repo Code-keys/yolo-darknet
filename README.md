@@ -1,4 +1,7 @@
 # updating...
+
+Aim to create a simple way to use all net by darknet.
+
 # yolov4 modified
 cut-channel prune
 
