@@ -2,13 +2,8 @@
 
 Aim to create a simple way to use all net by darknet.
 
-# yolov4 modified
 cut-channel prune
-
 cut-layer prune
-
-# scaled-yolov4.cfg
-A implementation of scaled-yolov4 using darknet. including scaled-yolov4 p5、p6、p7，CSP-my, CSP-official，tiny.
 
 # yolov5.cfg
 A implementation of yolov5 using darknet. including  s ,m ,l, x.
