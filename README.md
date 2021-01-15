@@ -14,6 +14,8 @@ Replace the Focus() by conv with stride=2 and groups=3.
 
 Merged two head-convs of the CSP to speed.
 
+and so on.
+
 
 created yolov5-tiny is better than yolov4-tiny: # paper url #
 
