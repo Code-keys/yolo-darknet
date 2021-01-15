@@ -1,22 +1,13 @@
 # updating...
 
-Aim to create a simple way to use all net by darknet.
+c++ version!
 
-cut-channel prune
-cut-layer prune
+based 0n tensorrt 7.0 and opencv 3.2.2
 
-# yolov5.cfg
-A implementation of yolov5 using darknet. including  s ,m ,l, x.
+Aim to create a simple way to SPEED darknet.
 
-A implementation of Ultralytics-yolov5 using darknet. including s m l x. 
+FOR WINDOWS CMAKE OR UBUNTU1 18.04 
 
-Replace the Focus() by conv with stride=2 and groups=3.
+AUTO BUILD ENGINE BY CFG AND WEIGHTS !
 
-Merged two head-convs of the CSP to speed.
-
-
-created yolov5-tiny is better than yolov4-tiny: # paper url #
-
-Thanks to correct my mistakes！
-
-copyright@all!
+Thanks to tensorrtx project!
