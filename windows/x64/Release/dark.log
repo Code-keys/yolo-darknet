@@ -1,20 +1,66 @@
-﻿生成启动时间为 2021/1/16 18:51:22。
-     1>项目“C:\Users\cx\Desktop\v2\dark\dark.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2021/1/16 19:54:14。
+     1>项目“E:\MyGitHub\yolo-darknet\windows\dark.vcxproj”在节点 2 上(Build 个目标)。
+     1>AddCudaCompileDeps:
+         E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /DNDEBUG /D_CONSOLE /D_MBCS /I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include" /I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\bin" /I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include" /I. /FIcuda_runtime.h /c E:\MyGitHub\yolo-darknet\windows\Kernel_Factory.cu 
+     1>项目“E:\MyGitHub\yolo-darknet\windows\dark.vcxproj”(1)正在节点 2 上生成“E:\MyGitHub\yolo-darknet\windows\dark.vcxproj”(1:2) (CudaBuildCore 个目标)。
+     1>CudaBuildCore:
+         Compiling CUDA source file Kernel_Factory.cu...
+         cmd.exe /C "C:\Users\cx\AppData\Local\Temp\tmpa8f0803481dd414288786879144e0597.cmd"
+         "E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\bin\nvcc.exe" -gencode=arch=compute_35,code=\"sm_35,compute_35\" --use-local-env -ccbin "E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include" -I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include"     --keep-dir x64\Release -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Fdx64\Release\vc140.pdb /FS /Zi  /MD " -o x64\Release\Kernel_Factory.cu.obj "E:\MyGitHub\yolo-darknet\windows\Kernel_Factory.cu"
+         
+         E:\MyGitHub\yolo-darknet\windows>"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\bin\nvcc.exe" -gencode=arch=compute_35,code=\"sm_35,compute_35\" --use-local-env -ccbin "E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include" -I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include"     --keep-dir x64\Release -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Fdx64\Release\vc140.pdb /FS /Zi  /MD " -o x64\Release\Kernel_Factory.cu.obj "E:\MyGitHub\yolo-darknet\windows\Kernel_Factory.cu" 
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(825): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(1760): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(2622): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(3461): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(4404): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(5302): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(6213): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(7094): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(7893): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/device_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/device_functions.h(773): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/device_functions.h(1629): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\device_double_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_20_intrinsics.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_20_intrinsics.h(926): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(825): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(1760): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(2622): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(3461): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(4404): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(5302): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(6213): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(7094): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(7893): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/device_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/device_functions.h(773): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/device_functions.h(1629): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\device_double_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_20_intrinsics.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_20_intrinsics.h(926): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         Kernel_Factory.cu
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(825): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(1760): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(2622): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(3461): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(4404): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(5302): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(6213): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(7094): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h(7893): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>已完成生成项目“E:\MyGitHub\yolo-darknet\windows\dark.vcxproj”(CudaBuildCore 个目标)的操作。
      1>ClCompile:
-         E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include" /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D WIN64 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt main.cpp
+         E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include" /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D WIN64 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt main.cpp Factory.cpp Kernel_Factory.hpp
          main.cpp
-       Link:
-         E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\cx\Desktop\v2\dark\x64\Release\dark.exe" /NOLOGO /LIBPATH:"E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\lib\x64" cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\cx\Desktop\v2\dark\x64\Release\dark.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\cx\Desktop\v2\dark\x64\Release\dark.lib" /MACHINE:X64 x64\Release\Kernel_Factory.cu.obj
-         x64\Release\main.obj
-         x64\Release\Factory.obj
-         x64\Release\Kernel_Factory.obj
-           正在创建库 C:\Users\cx\Desktop\v2\dark\x64\Release\dark.lib 和对象 C:\Users\cx\Desktop\v2\dark\x64\Release\dark.exp
-         正在生成代码
-         All 12 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-         已完成代码的生成
-         dark.vcxproj -> C:\Users\cx\Desktop\v2\dark\x64\Release\dark.exe
-     1>已完成生成项目“C:\Users\cx\Desktop\v2\dark\dark.vcxproj”(Build 个目标)的操作。
+     1>e:\mygithub\yolo-darknet\windows\main.hpp(16): fatal error C1083: 无法打开包括文件: “extra_lib\tensorrt\include\NvInferRuntime.h”: No such file or directory
+         Factory.cpp
+         Kernel_Factory.hpp
+     1>已完成生成项目“E:\MyGitHub\yolo-darknet\windows\dark.vcxproj”(Build 个目标)的操作 - 失败。
 
-已成功生成。
+生成失败。
 
-已用时间 00:00:01.18
+已用时间 00:00:05.59

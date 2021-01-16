@@ -91,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Factory.hpp" />
-    <ClInclude Include="main.hpp" />
+    <ClInclude Include="main_set.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -1,10 +1,10 @@
 //SETTING THE EXTRA LIBRARY TO USE
 #define CUDA 1
 #define OPENCV 0
-#define TENSORRT 1
+#define TENSORRT 0
 #define NUMCPP 0
 
-#include "main.hpp"
+#include "main_set.hpp"
 
 int main(void) {
 
