@@ -1,0 +1,268 @@
+E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include\cuda_runtime.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_config.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\crtdefs.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\sal.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ConcurrencySal.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vadefs.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_defines.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\limits.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stddef.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\library_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\channel_descriptor.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_device_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_functions.hpp
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/common_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\string.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_memory.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_memcpy_s.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\errno.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_string.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wstring.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\time.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wtime.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\math.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdlib.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_malloc.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_search.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wstdlib.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\yvals.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xkeycheck.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\crtdefs.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\use_ansi.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\math.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtgmath.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtr1common
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cstdlib
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\math_functions.hpp
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\channel_descriptor.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\channel_descriptor.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt/device_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\device_functions.hpp
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_atomic_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\device_double_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\device_double_functions.hpp
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_20_atomic_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_32_atomic_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_35_atomic_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_32_atomic_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_60_atomic_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_20_intrinsics.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_30_intrinsics.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_32_intrinsics.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_35_intrinsics.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_32_intrinsics.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\sm_61_intrinsics.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\sm_70_rt.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\builtin_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\driver_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\crt\host_defines.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_surface_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_fetch_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_texture_types.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\texture_indirect_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\surface_indirect_functions.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\cuda_runtime_api.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\device_launch_parameters.h
+e:\programdata\nvidia corporarion\cuda\v10.0\include\vector_types.h
+c:\users\cx\desktop\v2\dark\main.hpp
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\istream
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ios
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\climits
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cstdio
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wstdio.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_stdio_config.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\streambuf
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xiosbase
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cstring
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\stdexcept
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\exception
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\type_traits
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstddef
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cstddef
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\initializer_list
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\malloc.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\eh.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_terminate.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cstdint
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\stdint.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\limits
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ymath.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cfloat
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\float.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cwchar
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\wchar.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wconio.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wctype.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wdirect.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wio.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_share.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_wprocess.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\sys/stat.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\sys/types.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\new
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_new.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\utility
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\crtdbg.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_new_debug.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xatomic0.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\intrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\setjmp.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\immintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\wmmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\nmmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\smmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\tmmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\pmmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\emmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\mmintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ammintrin.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\typeinfo
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_typeinfo.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocinfo
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocinfo.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\ctype.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\locale.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xfacet
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cerrno
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\share.h
+c:\users\cx\desktop\v2\dark\Kernel_Factory.hpp
+E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include\cuda_runtime.h
+E:\ProgramData\NVIDIA Corporarion\CUDA\v10.0\include\device_launch_parameters.h
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\string
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vector
+E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory
