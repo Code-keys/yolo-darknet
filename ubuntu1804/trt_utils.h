@@ -41,6 +41,8 @@
 std::string trim(std::string s);
 float clamp(const float val, const float minVal, const float maxVal);
 bool fileExists(const std::string fileName, bool verbose = true);
+int read_files_in_dir(const char *p_dir_name, std::vector<std::string> &file_names) ;
+
 std::vector<float> loadWeights(const std::string weightsFilePath, const std::string& networkType);
 std::string dimsToString(const nvinfer1::Dims d);
 void displayDimType(const nvinfer1::Dims d);

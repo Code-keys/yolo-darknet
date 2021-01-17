@@ -126,16 +126,24 @@ int main(int argc,char* argv[])
 
     NetworkInfo networkInfo;
 
-    networkInfo.networkType     = "yolov4-tiny";
-    networkInfo.configFilePath  = "../data/yolov4-tiny.cfg";
-    networkInfo.wtsFilePath     = "../data/yolov4-tiny.weights";
+    networkInfo.networkType     = "yolov4";
+    networkInfo.configFilePath  = "";
+    networkInfo.wtsFilePath     = "";
     networkInfo.deviceType      = "kGPU";
     networkInfo.inputBlobName   = "data";
 
-    std::string modelname = networkInfo.networkType + ".engine";
 
     IBuilder* builder = createInferBuilder(gLogger);
     if (argc == 2 && std::string(argv[1]) == "-s") {
+
+        std::cout << "\n  cfg  : ";
+        std::cin >> networkInfo.configFilePath ;
+        std::cout << "\n  weights  : ";
+        std::cin >> networkInfo.wtsFilePath ;
+        
+        std::string modelname = networkInfo.configFilePath.substr(0, (networkInfo.configFilePath.find(".cfg")) + ".engine"))); // networkInfo.networkType + ".engine";
+        std::cout << "engine will be build : \n"<< modelname << std::endl;
+
         IHostMemory* modelStream{nullptr};
         Yolo yolo(networkInfo);
         ICudaEngine *cudaEngine = yolo.createEngine (builder);
@@ -150,6 +158,9 @@ int main(int argc,char* argv[])
         modelStream->destroy();
         return 0;
     } else if (argc == 2 && std::string(argv[1]) == "-d") {
+        std::string modelname;
+        std::cout << "\n  engine  : ";
+        std::cin >> modelname ;
         std::ifstream file(modelname, std::ios::binary);
         if (file.good()) {
             file.seekg(0, file.end);
@@ -211,6 +222,13 @@ int main(int argc,char* argv[])
     float prob[OUTPUT_SIZE];
 
     std::cout<<"start detect"<<std::endl;
+
+    if std::vector<std::string> file_names;
+    if (read_files_in_dir(argv[2], file_names) < 0) {
+        std::cout << "read_files_in_dir failed." << std::endl;
+        return -1;
+
+
 
     while (true){
         if(!detect){detect=true; continue;}
