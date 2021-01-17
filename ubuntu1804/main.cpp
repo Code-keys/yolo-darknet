@@ -211,6 +211,13 @@ int main(int argc,char* argv[])
     cudaStream_t stream;
     cudaStreamCreate(&stream);
 
+    cv::Mat img;
+    cv::Mat pr_img;
+    bool detect = false;
+    float data[3 * input_h * input_w];
+    float prob[OUTPUT_SIZE];
+
+    std::cout<<"start detect"<<std::endl;
 
     // DMA input batch data to device, infer on the batch asynchronously, and DMA output back to host
     std::string source;
@@ -232,12 +239,14 @@ int main(int argc,char* argv[])
 
     }else if(source.find(".jpg") ){
         source_type = 3;
+        img = cv.imread()
 
 
 
 
     }else if(source.find(".txt") ){
         source_type = 5;
+        int fp = 0;
 
 
 
@@ -253,18 +262,6 @@ int main(int argc,char* argv[])
     // }
     }
 
-    cv::Mat img;
-    cv::Mat pr_img;
-    int fp = 0;
-
-    bool detect = false;
-
-    float data[3 * input_h * input_w];
-    float prob[OUTPUT_SIZE];
-
-    std::cout<<"start detect"<<std::endl;
-
-
     while (true){
         if(!detect){detect=true; continue;};
 
@@ -274,8 +271,7 @@ int main(int argc,char* argv[])
                 cap >> img;
                 break;
             case 3:
-                img = cv::imread(std::string(argv[2]) + "/" + file_names[f - fcount + 1 + b]);
-
+                break;
             case 4:
                 
             case 5:
