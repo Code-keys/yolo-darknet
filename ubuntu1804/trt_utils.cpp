@@ -102,7 +102,7 @@ std::vector<float> loadWeights(const std::string weightsFilePath, const std::str
     return weights;
 }
 
-std::vector<std::pair<str,map<str,vector<str>>>> loadCfg(const std::string cfgsFilePath, const std::string& networkType)
+std::vector<std::pair<std::string,std::map<std::string,std::vector<std::string>>>> loadCfg(const std::string cfgsFilePath, const std::string& networkType)
 {
     /*/ [
           < "net" :         [  "id"    : [  "0"        ],
