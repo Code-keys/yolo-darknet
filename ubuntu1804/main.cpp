@@ -234,7 +234,7 @@ int main(int argc,char* argv[])
     }else if(source.find("camera") ){
         cv::VideoCapture cap(0);
         source_type = 1;
-
+        
 
 
     }else if(source.find(".jpg") ){
