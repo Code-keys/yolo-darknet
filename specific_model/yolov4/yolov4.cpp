@@ -1183,15 +1183,23 @@ int main(int argc, char** argv) {
         return -1;
     }
 
+
     // std::string filename;
-    // std::cout << "input image or video filename: ";
+    // std::cout << "input video filename: ";
     // if(filename.size() == 0) std::cin >> filename;
     // std::string const file_ext = filename.substr(filename.find_last_of(".") + 1);
-    std::vector<std::string> file_names;
-    if (read_files_in_dir(argv[2], file_names) < 0) {
-        std::cout << "read_files_in_dir failed." << std::endl;
-        return -1;
-    }
+
+
+    // std::string folder;
+    // std::cin >> folder;
+    // const char *folder = folder.c_str();
+    // std::vector<std::string> file_names;  //const_cast<char*>
+    // if (read_files_in_dir(folder, file_names) < 0) {
+    //     std::cout << "read_files_in_dir failed." << std::endl;
+    //     return -1;
+    // }
+
+
 
     #define BATCH_SIZE  1
     

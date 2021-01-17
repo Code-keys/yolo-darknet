@@ -211,6 +211,23 @@ int main(int argc,char* argv[])
     cudaStream_t stream;
     cudaStreamCreate(&stream);
 
+
+
+    // std::string filename;
+    // std::cout << "input video filename: ";
+    // if(filename.size() == 0) std::cin >> filename;
+    // std::string const file_ext = filename.substr(filename.find_last_of(".") + 1);
+
+
+    // std::string folder;
+    // std::cin >> folder;
+    // const char *folder = folder.c_str();
+    // std::vector<std::string> file_names;  //const_cast<char*>
+    // if (read_files_in_dir(folder, file_names) < 0) {
+    //     std::cout << "read_files_in_dir failed." << std::endl;
+    //     return -1;
+    // }
+
     // DMA input batch data to device, infer on the batch asynchronously, and DMA output back to host
     cv::VideoCapture cap(0);
     cv::Mat img;
@@ -223,16 +240,18 @@ int main(int argc,char* argv[])
 
     std::cout<<"start detect"<<std::endl;
 
-    if std::vector<std::string> file_names;
-    if (read_files_in_dir(argv[2], file_names) < 0) {
-        std::cout << "read_files_in_dir failed." << std::endl;
-        return -1;
+
+
+    img = cv::imread(std::string(argv[2]) + "/" + file_names[f - fcount + 1 + b]);
 
 
 
     while (true){
         if(!detect){detect=true; continue;}
+
         cap>>img;
+
+
         cv::Mat pr_img = preprocess_img(img,input_w,input_h);
         for (int i = 0; i < input_h * input_w; i++) {
             data[i] = pr_img.at<cv::Vec3b>(i)[2] / 255.0;
@@ -240,20 +259,17 @@ int main(int argc,char* argv[])
             data[i + 2 * input_h * input_w] = pr_img.at<cv::Vec3b>(i)[0] / 255.0;
         }
 
+
 //        // Run inference
         auto start = std::chrono::system_clock::now();
-
         cudaMemcpyAsync(buffers[0], data, batchSize * 3 * input_w * input_h * sizeof(float), cudaMemcpyHostToDevice, stream);
         context->enqueue(batchSize, buffers, stream, nullptr);
         cudaMemcpyAsync(prob, buffers[1], batchSize * OUTPUT_SIZE * sizeof(float), cudaMemcpyDeviceToHost, stream);
         cudaStreamSynchronize(stream);
-
         auto end = std::chrono::system_clock::now();
         std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "ms" << std::endl;
-
         std::vector<Detection> res;
         nms(res, prob);
-
         for (size_t j = 0; j < res.size(); j++) {
             float *p = (float*)&res[j];
             cv::Rect r = get_rect(img, res[j].bbox,input_w,input_h);
@@ -263,9 +279,19 @@ int main(int argc,char* argv[])
                     std::to_string((float)res[j].class_confidence);
             cv::putText(img, text, cv::Point(r.x, r.y - 1), cv::FONT_HERSHEY_PLAIN, 1.2, cv::Scalar(0xFF, 0xFF, 0xFF), 2);
         }
+
         cv::imshow("_", img);
+        cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b])
         if(cv::waitKey(1)==27){break;}
     }
+
+
+
+
+
+
+
+
 
     // Release stream and buffers
     cudaStreamDestroy(stream);
