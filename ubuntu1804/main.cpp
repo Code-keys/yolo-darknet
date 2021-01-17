@@ -242,24 +242,28 @@ int main(int argc,char* argv[])
         img = cv.imread()
 
 
-
-
     }else if(source.find(".txt") ){
         source_type = 5;
         int fp = 0;
-
-
-
+        std::ifstream file(source);
+        std::vector<std::string> file_names;
+        if (!file.is_open()) std::cout << "File not found! \n";
+        else{
+            for (std::string line; file >> line;) {
+                file_names.push(line);
+                }
+            }
+        
     }else if(source.find(".") ){
         source_type = 4;
-    // std::string folder;
-    // std::cin >> folder;
-    // const char *folder = folder.c_str();
-    // std::vector<std::string> file_names;  //const_cast<char*>
-    // if (read_files_in_dir(folder, file_names) < 0) {
-    //     std::cout << "read_files_in_dir failed." << std::endl;
-    //     return -1;
-    // }
+        int fp = 0;
+        const char *folder = source.c_str();
+        std::vector<std::string> file_names;  //const_cast<char*>
+        if (read_files_in_dir(folder, file_names) < 0) {
+            std::cout << "read_files_in_dir failed." << std::endl;
+            return -1;
+        }
+
     }
 
     while (true){
@@ -273,9 +277,13 @@ int main(int argc,char* argv[])
             case 3:
                 break;
             case 4:
-                
+                if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
+                cv::Mat img = cv::imread(line[fp++]);
+                break;
             case 5:
-                
+                if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
+                cv::Mat img = cv::imread(source + "/" + line[fp++]);
+                break;
             default :
                 std::cout << "";
                 break;]
