@@ -212,13 +212,37 @@ int main(int argc,char* argv[])
     cudaStreamCreate(&stream);
 
 
+    // DMA input batch data to device, infer on the batch asynchronously, and DMA output back to host
+    std::string source;
+    uint const source_type=0;
+    std::cout << "\n Type The path of source .\n  camera for camera \n  video\n  images\n  Folder\n  Txt contain the path of images.\n";
+    std::cin >> source;
 
-    // std::string filename;
-    // std::cout << "input video filename: ";
-    // if(filename.size() == 0) std::cin >> filename;
-    // std::string const file_ext = filename.substr(filename.find_last_of(".") + 1);
+    std::string const basename  = filename.substr(filename.find_last_of("/") + 1);
+
+    if ( source.find(".mp4") ||source.find(".avi")||source.find(".mp4")||source.find(".mp4")||source.find(".mp4") ){
+        cv::VideoCapture cap("source");
+        source_type = 2;
+
+    }else if(source.find("camera") ){
+        cv::VideoCapture cap(0);
+        source_type = 1;
 
 
+
+    }else if(source.find(".jpg") ){
+        source_type = 3;
+
+
+
+
+    }else if(source.find(".txt") ){
+        source_type = 5;
+
+
+
+    }else if(source.find(".") ){
+        source_type = 4;
     // std::string folder;
     // std::cin >> folder;
     // const char *folder = folder.c_str();
@@ -227,11 +251,11 @@ int main(int argc,char* argv[])
     //     std::cout << "read_files_in_dir failed." << std::endl;
     //     return -1;
     // }
+    }
 
-    // DMA input batch data to device, infer on the batch asynchronously, and DMA output back to host
-    cv::VideoCapture cap(0);
     cv::Mat img;
     cv::Mat pr_img;
+    int fp = 0;
 
     bool detect = false;
 
@@ -241,16 +265,25 @@ int main(int argc,char* argv[])
     std::cout<<"start detect"<<std::endl;
 
 
-
-    img = cv::imread(std::string(argv[2]) + "/" + file_names[f - fcount + 1 + b]);
-
-
-
     while (true){
-        if(!detect){detect=true; continue;}
+        if(!detect){detect=true; continue;};
 
-        cap>>img;
+        switch(source_type){
+            case 1:
+            case 2:
+                cap >> img;
+                break;
+            case 3:
+                img = cv::imread(std::string(argv[2]) + "/" + file_names[f - fcount + 1 + b]);
 
+            case 4:
+                
+            case 5:
+                
+            default :
+                std::cout << "";
+                break;]
+        };
 
         cv::Mat pr_img = preprocess_img(img,input_w,input_h);
         for (int i = 0; i < input_h * input_w; i++) {
