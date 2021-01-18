@@ -1,9 +1,9 @@
 # updating...
 
-Aim to create a simple way to use all net by darknet.
+Aim to create a simple way to optimizer&&speed all model by darknet.
 
-cut-channel prune
-cut-layer prune
+	cut-channel prune
+	cut-layer prune
 
 # yolov5.cfg
 A implementation of yolov5 using darknet. including  s ,m ,l, x.
