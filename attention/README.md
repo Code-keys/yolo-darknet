@@ -1,3 +1,0 @@
-# updating...
-# using [sam] to use the attention
-
