@@ -1,0 +1,18 @@
+# common
+opencv-python
+numpy
+pyqt5
+
+# for camera
+pypylon
+
+# for darknet
+# None
+
+# trnsorRT for yolov5_(s/m/l/x) v4 v3
+# recommond yolov5_s for detect/track
+tensorrt >= 7.0
+
+# if possible, use the torch frame to adapt mounts of models.
+# pytorch >= 1.1
+# torchvision
