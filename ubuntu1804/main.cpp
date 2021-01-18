@@ -351,7 +351,6 @@ int main(int argc,char* argv[])
         cv::imshow("_", img);
         cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b]);
 
-
         if(cv::waitKey(1)==27){break;}
     }
 
