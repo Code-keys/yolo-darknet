@@ -173,8 +173,8 @@ int main(int argc,char* argv[])
         }
     }else {
         std::cerr << "arguments not right!" << std::endl;
-        std::cerr << "./yolov3 -s  // serialize model to plan file" << std::endl;
-        std::cerr << "./yolov3 -d  // deserialize plan file and run inference" << std::endl;
+        std::cerr << "./yolo -s  // serialize model to plan file" << std::endl;
+        std::cerr << "./yolo -d  // deserialize plan file and run inference" << std::endl;
         return -1;
     }
 
@@ -216,49 +216,58 @@ int main(int argc,char* argv[])
     bool detect = false;
     float data[3 * input_h * input_w];
     float prob[OUTPUT_SIZE];
-
+    std::string const  source;
+    std::vector<std::string> file_names;
+    uint const source_type=0;
     std::cout<<"start detect"<<std::endl;
 
     // DMA input batch data to device, infer on the batch asynchronously, and DMA output back to host
-    std::string source;
-    uint const source_type=0;
+
     std::cout << "\n Type The path of source .\n  camera for camera \n  video\n  images\n  Folder\n  Txt contain the path of images.\n";
     std::cin >> source;
+    if (source.find("'")|| source.find("\"") ){
+        source = source.substr(1,source.size()-1);
+    }
 
-    std::string const basename  = filename.substr(filename.find_last_of("/") + 1);
+    std::string const basename  = source.substr(source.find_last_of("/") + 1);
 
     if ( source.find(".mp4") ||source.find(".avi")||source.find(".mp4")||source.find(".mp4")||source.find(".mp4") ){
         cv::VideoCapture cap("source");
         source_type = 2;
+        cv::VideoWriter output;
+        cv::Size S = cv::Size((int)cap.get(CV_CAP_PROP_FRAME_WIDTH),
+                (int)cap.get(CV_CAP_PROP_FRAME_HEIGHT));
+        //打开视频路劲，设置基本信息 open函数中你参数跟上面给出的VideoWriter函数是一样的
+        output.open("", -1, 30.0, S, true);
 
     }else if(source.find("camera") ){
         cv::VideoCapture cap(0);
         source_type = 1;
+        cv::VideoWriter output;
+        cv::Size S = cv::Size((int)cap.get(CV_CAP_PROP_FRAME_WIDTH),
+                (int)cap.get(CV_CAP_PROP_FRAME_HEIGHT));
+        //打开视频路劲，设置基本信息 open函数中你参数跟上面给出的VideoWriter函数是一样的
+        output.open("", -1, 30.0, S, true);
         
-
-
     }else if(source.find(".jpg") ){
         source_type = 3;
-        img = cv.imread()
-
+        file_names.push(source);
 
     }else if(source.find(".txt") ){
         source_type = 5;
         int fp = 0;
         std::ifstream file(source);
-        std::vector<std::string> file_names;
         if (!file.is_open()) std::cout << "File not found! \n";
         else{
             for (std::string line; file >> line;) {
                 file_names.push(line);
                 }
             }
-        
-    }else if(source.find(".") ){
+~~
+    }else if(basename.find(".")){
         source_type = 4;
         int fp = 0;
-        const char *folder = source.c_str();
-        std::vector<std::string> file_names;  //const_cast<char*>
+        const char *folder = source.c_str(); //const_cast<char*>
         if (read_files_in_dir(folder, file_names) < 0) {
             std::cout << "read_files_in_dir failed." << std::endl;
             return -1;
@@ -273,8 +282,10 @@ int main(int argc,char* argv[])
             case 1:
             case 2:
                 cap >> img;
+
                 break;
             case 3:
+                img = cv.imread(file_names);
                 break;
             case 4:
                 if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
@@ -286,7 +297,7 @@ int main(int argc,char* argv[])
                 break;
             default :
                 std::cout << "";
-                break;]
+                break;
         };
 
         cv::Mat pr_img = preprocess_img(img,input_w,input_h);
@@ -295,8 +306,6 @@ int main(int argc,char* argv[])
             data[i + input_h * input_w] = pr_img.at<cv::Vec3b>(i)[1] / 255.0;
             data[i + 2 * input_h * input_w] = pr_img.at<cv::Vec3b>(i)[0] / 255.0;
         }
-
-
 //        // Run inference
         auto start = std::chrono::system_clock::now();
         cudaMemcpyAsync(buffers[0], data, batchSize * 3 * input_w * input_h * sizeof(float), cudaMemcpyHostToDevice, stream);
@@ -317,18 +326,34 @@ int main(int argc,char* argv[])
             cv::putText(img, text, cv::Point(r.x, r.y - 1), cv::FONT_HERSHEY_PLAIN, 1.2, cv::Scalar(0xFF, 0xFF, 0xFF), 2);
         }
 
+        switch(source_type){
+            case 1:
+            case 2:
+                output << img;
+                break;
+            case 3:
+                cv::imshow("_", img);
+                cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b]);
+                break;
+            case 4:
+                if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
+                cv::Mat img = cv::imread(line[fp++]);
+                break;
+            case 5:
+                if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
+                cv::Mat img = cv::imread(source + "/" + line[fp++]);
+                break;
+            default :
+                std::cout << "";
+                break;]
+        };
+
         cv::imshow("_", img);
-        cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b])
+        cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b]);
+
+
         if(cv::waitKey(1)==27){break;}
     }
-
-
-
-
-
-
-
-
 
     // Release stream and buffers
     cudaStreamDestroy(stream);
