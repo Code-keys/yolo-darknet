@@ -281,6 +281,7 @@ nvinfer1::ILayer* netAddConvBNActive(int layerIdx, std::map<std::string, std::st
     assert(block.find("size") != block.end());
     assert(block.find("stride") != block.end());
 
+
     bool batchNormalize, bias;
     if (block.find("batch_normalize") != block.end())
     {
@@ -302,10 +303,11 @@ nvinfer1::ILayer* netAddConvBNActive(int layerIdx, std::map<std::string, std::st
     int kernelSize = std::stoi(block.at("size"));
     int stride = std::stoi(block.at("stride"));
     int pad;
-    if (padding)
-        pad = (kernelSize - 1) / 2;
-    else
-        pad = 0;
+    int groups;
+
+    padding ? pad = (kernelSize - 1) / 2 :  pad = 0;
+
+    block.find("groups") ? group = std::stoi(block.at("group")): group = 1;
 
     /***** CONVOLUTION LAYER *****/
     /*****************************/
@@ -359,6 +361,7 @@ nvinfer1::ILayer* netAddConvBNActive(int layerIdx, std::map<std::string, std::st
     conv->setName(convLayerName.c_str());
     conv->setStride(nvinfer1::DimsHW{stride, stride});
     conv->setPadding(nvinfer1::DimsHW{pad, pad});
+    conv->setNbGroups(groups)
 
     /***** BATCHNORM LAYER *****/
     /***************************/
