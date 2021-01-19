@@ -1,0 +1,100 @@
+cmake_minimum_required(VERSION 2.6)
+
+set(pro_name "yolo_darknet_rt")
+
+project(${pro_name})
+
+IF (WIN32)
+	MESSAGE(STATUS "windows cmake ! ")
+add_definitions(-std=c++11)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Ofast -D_MWAITXINTRIN_H_INCLUDED")
+
+set(OpenCV_DIR "C:\\OpenCV\\opencv\\build")  #2
+set(TRT_DIR "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\TensorRT-7.0.0.11")  #3
+####
+option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
+set(CUDA_NVCC_PLAGS ${CUDA_NVCC_PLAGS};-std=c++11; -g; -G;-gencode; arch=compute_75;code=sm_75)
+enable_language(CUDA)  # add this line, then no need to setup cuda path in VS
+####
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads)
+find_package(CUDA REQUIRED)
+find_package(OpenCV QUIET
+    NO_MODULE
+    NO_DEFAULT_PATH
+    NO_CMAKE_PATH
+    NO_CMAKE_ENVIRONMENT_PATH
+    NO_SYSTEM_ENVIRONMENT_PATH
+    NO_CMAKE_PACKAGE_REGISTRY
+    NO_CMAKE_BUILDS_PATH
+    NO_CMAKE_SYSTEM_PATH
+    NO_CMAKE_SYSTEM_PACKAGE_REGISTRY
+)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${TRT_DIR}\\include)
+include_directories(${OpenCV_INCLUDE_DIRS})
+link_directories(${TRT_DIR}\\lib)
+
+add_executable(${pro_name} 
+				${PROJECT_SOURCE_DIR}/main.cpp 
+				${PROJECT_SOURCE_DIR}/yololayer.cu 
+				${PROJECT_SOURCE_DIR}/yololayer.h 
+              )   #4
+			 
+target_link_libraries(${pro_name}  "nvinfer" "nvinfer_plugin")   #5
+target_link_libraries(${pro_name} ${OpenCV_LIBS})          #6
+target_link_libraries(${pro_name} ${CUDA_LIBRARIES})   #7
+target_link_libraries(${pro_name} Threads::Threads)       #8
+
+
+
+
+
+
+
+
+
+
+ELSEIF (APPLE)
+	MESSAGE(STATUS "Now is Apple systens，dont support.")
+ELSEIF (UNIX)
+	MESSAGE(STATUS "Now is UNIX-like OS's. Including aPPLE os x  and CygWin")
+
+
+set(TRT_DIR "/home/fusion/Project/TensorRT-7.0.0.11")  #3
+add_definitions(-std=c++11)
+
+option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_BUILD_TYPE Debug)
+set(CUDA_NVCC_PLAGS ${CUDA_NVCC_PLAGS};-std=c++11;-g;-G;-gencode;arch=compute_30;code=sm_30)
+
+find_package(CUDA REQUIRED)
+find_package(OpenCV)
+
+include_directories(OpenCV_INCLUDE_DIRS)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(/usr/local/cuda/include)
+include_directories(${TRT_DIR}/include)
+link_directories(/usr/local/cuda/lib64)
+link_directories(${TRT_DIR}/lib)
+
+cuda_add_library(yolohead SHARED ${PROJECT_SOURCE_DIR}/yololayer.cu)
+cuda_add_library(mish SHARED ${PROJECT_SOURCE_DIR}/mish.cu)
+
+target_link_libraries(yolohead nvinfer cudart)
+target_link_libraries(mish nvinfer cudart)
+
+add_executable(${pro_name} ${PROJECT_SOURCE_DIR}/main.cpp)
+target_link_libraries(${pro_name} nvinfer)
+target_link_libraries(${pro_name} cudart)
+target_link_libraries(${pro_name} yolohead)
+target_link_libraries(${pro_name} mish)
+target_link_libraries(${pro_name} ${OpenCV_LIBS})
+
+add_definitions(-O2 -pthread)
+ENDIF ()
