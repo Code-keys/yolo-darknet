@@ -229,7 +229,7 @@ int main(int argc,char* argv[])
         source = source.substr(1,source.size()-1);
     }
 
-    std::string const basename  = source.substr(source.find_last_of("/") + 1);
+    std::string basename  = source.substr(source.find_last_of("/") + 1);
 
     if ( source.find(".mp4") ||source.find(".avi")||source.find(".mp4")||source.find(".mp4")||source.find(".mp4") ){
         cv::VideoCapture cap("source");
@@ -238,7 +238,7 @@ int main(int argc,char* argv[])
         cv::Size S = cv::Size((int)cap.get(CV_CAP_PROP_FRAME_WIDTH),
                 (int)cap.get(CV_CAP_PROP_FRAME_HEIGHT));
         //打开视频路劲，设置基本信息 open函数中你参数跟上面给出的VideoWriter函数是一样的
-        output.open("", -1, 30.0, S, true);
+        output.open("./my_video.mpg", -1, 30.0, S, true);
 
     }else if(source.find("camera") ){
         cv::VideoCapture cap(0);
@@ -247,8 +247,13 @@ int main(int argc,char* argv[])
         cv::Size S = cv::Size((int)cap.get(CV_CAP_PROP_FRAME_WIDTH),
                 (int)cap.get(CV_CAP_PROP_FRAME_HEIGHT));
         //打开视频路劲，设置基本信息 open函数中你参数跟上面给出的VideoWriter函数是一样的
-        output.open("", -1, 30.0, S, true);
-        
+        output.open("./my_video.mpg", //输出文件名
+                    CV_FOURCC('D', 'I', 'V', 'X') ,  // MPEG-4 编码
+                    30.0,  // 帧率 (FPS)
+                    S, // 单帧图片分辨率为  
+                    true// 只输入彩色图
+                    );
+
     }else if(source.find(".jpg") ){
         source_type = 3;
         file_names.push(source);
@@ -263,7 +268,6 @@ int main(int argc,char* argv[])
                 file_names.push(line);
                 }
             }
-~~
     }else if(basename.find(".")){
         source_type = 4;
         int fp = 0;
@@ -279,21 +283,18 @@ int main(int argc,char* argv[])
         if(!detect){detect=true; continue;};
 
         switch(source_type){
-            case 1:
-            case 2:
+            case 1: //carera
+            case 2: //video
                 cap >> img;
-
                 break;
-            case 3:
+            case 3:  //images
                 img = cv.imread(file_names);
                 break;
-            case 4:
-                if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
+            case 4: // dir 
+            case 5: // txt
+                if (fp >= file_names.size()-1){fp=0;std::cout << "A new epoch !";}
+                basename  = line[fp++].substr(line[fp++].find_last_of("/") + 1);
                 cv::Mat img = cv::imread(line[fp++]);
-                break;
-            case 5:
-                if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
-                cv::Mat img = cv::imread(source + "/" + line[fp++]);
                 break;
             default :
                 std::cout << "";
@@ -333,23 +334,20 @@ int main(int argc,char* argv[])
                 break;
             case 3:
                 cv::imshow("_", img);
-                cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b]);
+                cv::imwrite(img,"output/"+ basename);
                 break;
             case 4:
-                if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
-                cv::Mat img = cv::imread(line[fp++]);
-                break;
             case 5:
                 if (fp >+ file_names.size()-1){fp=0;std::cout << "A new epoch !";}
-                cv::Mat img = cv::imread(source + "/" + line[fp++]);
+                cv::imwrite(img,"output/"+basename);
                 break;
             default :
-                std::cout << "";
+                std::cout << "\n error !";
                 break;]
         };
 
-        cv::imshow("_", img);
-        cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b]);
+        // cv::imshow("_", img);
+        // cv::imwrite(img,"../infernce/"+ file_names[f - fcount + 1 + b]);
 
         if(cv::waitKey(1)==27){break;}
     }
