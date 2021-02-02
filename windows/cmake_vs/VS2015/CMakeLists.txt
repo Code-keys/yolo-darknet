@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
 
 project(yolo) # 1
-set(OpenCV_DIR "C:/OpenCV/opencv/build")  #2
-set(TRT_DIR "C:/Program Files/NVIDIA GPU Computing Toolkit/TensorRT-7.0.0.11")  #3
+set(OpenCV_DIR "C:/CV3.4.0/opencv/build")  #2
+set(TRT_DIR "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/TensorRT-7.0.0.11")  #3
 
 add_definitions(-std=c++11)
 option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
@@ -40,7 +40,6 @@ find_package(OpenCV QUIET
     NO_CMAKE_SYSTEM_PATH
     NO_CMAKE_SYSTEM_PACKAGE_REGISTRY
 )
-
 message(STATUS "OpenCV library status:")
 message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
@@ -49,9 +48,25 @@ message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${TRT_DIR}/lib)
 
-add_executable(yolo ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/yolo.cpp ${PROJECT_SOURCE_DIR}/trt_utils.cpp ${PROJECT_SOURCE_DIR}/mish.cu ${PROJECT_SOURCE_DIR}/yololayer.cu ${PROJECT_SOURCE_DIR}/yololayer.h ${PROJECT_SOURCE_DIR}/mish.h ${PROJECT_SOURCE_DIR}/logging.h ${PROJECT_SOURCE_DIR}/trt_utils.h ${PROJECT_SOURCE_DIR}/Utils.h)
+#cuda_add_library
 
-target_link_libraries(yolo  "nvinfer" "nvinfer_plugin")   #5
-target_link_libraries(yolo ${OpenCV_LIBS})          #6
-target_link_libraries(yolo ${CUDA_LIBRARIES})   #7
-target_link_libraries(yolo Threads::Threads)       #8
+add_executable(	
+	yolo
+	${PROJECT_SOURCE_DIR}/main.cpp 
+	${PROJECT_SOURCE_DIR}/yolo.cpp 
+	${PROJECT_SOURCE_DIR}/trt_utils.cpp 
+	${PROJECT_SOURCE_DIR}/mish.cu 
+	${PROJECT_SOURCE_DIR}/yololayer.cu 
+	${PROJECT_SOURCE_DIR}/yololayer.h 
+	${PROJECT_SOURCE_DIR}/mish.h 
+	${PROJECT_SOURCE_DIR}/logging.h 
+	${PROJECT_SOURCE_DIR}/trt_utils.h 
+	${PROJECT_SOURCE_DIR}/Utils.h
+)
+
+target_link_libraries(
+	yolo
+	"nvinfer" "nvinfer_plugin"
+	 ${OpenCV_LIBS}
+	 ${CUDA_LIBRARIES}
+	 Threads::Threads)       #8
