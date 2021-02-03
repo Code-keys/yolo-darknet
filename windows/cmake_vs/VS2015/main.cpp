@@ -122,6 +122,7 @@ int main(int argc,char* argv[])
     char *trtModelStream{nullptr};
     size_t size{0};
 
+	std::cout << "RT Infer !\n" << std::endl;
     
 
     IBuilder* builder = createInferBuilder(gLogger);

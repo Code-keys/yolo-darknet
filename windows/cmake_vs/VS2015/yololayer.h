@@ -88,7 +88,8 @@ namespace nvinfer1
             int mClassCount;
             int mInput_w;
             int mInput_h;
-            int mNumYoloLayers;
+			int mNumYoloLayers;
+
             std::vector<YoloKernel> mYoloKernel;
 
             float mIgnore_thresh = 0.05;

@@ -7,7 +7,9 @@
 
 using namespace YoloLayer;
 using namespace nvinfer1;
+using namespace Tn;
 
+/*
 YoloLayerPlugin::YoloLayerPlugin()
 {
     mClassCount = CLASS_NUM;
@@ -17,7 +19,7 @@ YoloLayerPlugin::YoloLayerPlugin()
     mYoloKernel.push_back(yolo3);
 
     mKernelCount = mYoloKernel.size();
-}
+}*/
 
 YoloLayerPlugin::~YoloLayerPlugin()
 {
@@ -114,11 +116,11 @@ void YoloLayerPlugin::destroy()
     delete this;
 }
 
-// Clone the plugin
+/*// Clone the plugin
 IPluginV2* YoloLayerPlugin::clone() const
 {
     return new YoloLayerPlugin();
-}
+}*/
 
 int YoloLayerPlugin::enqueue(int batchSize, const void*const * inputs, void** outputs, void* workspace, cudaStream_t stream)
 {
