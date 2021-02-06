@@ -126,6 +126,9 @@ int main(int argc,char* argv[])
     
 
     IBuilder* builder = createInferBuilder(gLogger);
+
+
+
 	std::string dotype = std::string(argv[1]);
     if (argc == 5 && dotype == "-s") {
         IHostMemory* modelStream{nullptr};
@@ -147,7 +150,7 @@ int main(int argc,char* argv[])
             std::cerr << "could not open plan output file" << std::endl;
             return -1;
         }
-		std::cout << "start writing engine file: " << modelname << std::endl;
+		std::cout << "writing engine file: " << modelname << std::endl;
         p.write(reinterpret_cast<const char*>(modelStream->data()), modelStream->size());
         modelStream->destroy();
         return 0;
