@@ -4,15 +4,18 @@ import cv2
 import time
 from .utils import *
 
-sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(__file__)+"/lib/win32/" )
+sys.path.append(os.path.dirname(__file__)+"/lib/unix/" )
+
 
 class Darknet:
     def __init__(self,
-                 configPath='./model/darknet/__model/yolov4_0.25.cfg',
-                 weightPath='./model/darknet/__model/yolov4_0.25.weights',
-                 metaPath='./model/darknet/__model/path.data',
-                 dllname = os.path.dirname(__file__) + "/yolo_cpp_dll.dll",
+                 configPath='/home/nvidia/pyCameraCD/data/yolov4_0.25.cfg',
+                 weightPath='/home/nvidia/pyCameraCD/data/yolov4_0.25.weights',
+                 metaPath='/home/nvidia/pyCameraCD/data/path.data',
+                 dllname = "/home/nvidia/pyCameraCD/model/darknet/lib/unix/libdarknet.so",# os.path.dirname(__file__) + "/lib/unix/libdarknet.so",
                  gpuid=0):
+        
         self.netMain = None
         self.metaMain = None
         self.altNames = None
@@ -21,8 +24,10 @@ class Darknet:
         self.weightPath = weightPath
         self.metaPath = metaPath
         self.gpuid = gpuid
+        
         self.loadNames()
         self.loadDLL()
+        print("dark.so loaded!")
         self.loadConfig()
         self.img = None
         self.infer_fps = 0
@@ -120,7 +125,9 @@ class Darknet:
                     print(
                         "Environment variables indicated a CPU run, but we didn't find `" + winNoGPUdll + "`. Trying a GPU run anyway.")
         else:
-            self.lib = CDLL(os.path.dirname(__file__) + "/libdarknet.so", RTLD_GLOBAL)
+            # sys.path.append(os.path.dirname(__file__)+"/lib/unix/" )
+            # CDLL(os.path.dirname(__file__) + "/lib/unix/libpthread.so")
+            self.lib = CDLL(self.dllname, RTLD_GLOBAL)
         self.lib.network_width.argtypes = [c_void_p]
         self.lib.network_width.restype = c_int
         self.lib.network_height.argtypes = [c_void_p]
@@ -299,19 +306,18 @@ class Darknet:
         # im = cv2.putText(im, self.infer_fps, (0,0), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.5, (0, 128, 0), 1)
         return im
 
-
 if __name__ == '__main__':
     detector = Darknet()
 
-    curimg = cv2.imread("__model/test.png")
+    curimg = cv2.imread("/home/nvidia/pyCameraCD/data/bin/1.jpg")
     curimg = cv2.cvtColor(curimg, cv2.COLOR_BGR2RGB)
 
     result = detector.draw_detect_results(im=curimg, source_type=0, color=(0, 0, 255))
     # cv2.imshow("sa", result)
-    # result = cv2.cvtColor(result, cv2.COLOR_RGB2BGR)
-    print(result)
+    result = cv2.cvtColor(result, cv2.COLOR_RGB2BGR)
+    print(result.shape)
 
-    for i in range(1000):
-        cv2.namedWindow('title', cv2.WINDOW_NORMAL)
-        cv2.imshow('title', result)
-        cv2.waitKey("esc")
+    # for i in range(1000):
+    #     cv2.namedWindow('title', cv2.WINDOW_NORMAL)
+    #     cv2.imshow('title', result)
+    #     cv2.waitKey()

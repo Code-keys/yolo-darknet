@@ -4,7 +4,53 @@ import numpy as np
 
 from .darknet import *
 from .trt import *
+from .auto import *
 # sys.path.append('./darknet')
+
+
+class ModelFactory(object): # Adaptor && Factory
+    def __init__(self):
+        self.fps = 0
+        self.model = None
+    def draw_detect_results(self,img):
+        if self.model is not None:
+            return    
+    @classmethod
+    def destory(self):
+        try:
+            if "rt" in name:
+                self.model.destory()
+            elif "dark" in name:
+                del self.model
+                self.model = None
+        except:
+            print("Model destory error !")
+    @classmethod
+    def build(self, string, args=()):
+        name = str.lower(string)
+        try:
+            if "tensorrt" in name:
+                self.model = YoLoTRT(*args)
+            elif "darknet" in name:
+                self.model = Darknet(*args)  
+                print("load Darknet ")
+            elif "auto" in name:
+                self.model = auto_YOLOv3Detector(*args)  
+            
+            else:
+                print("Model type not included !")
+        except:
+            print("Model load error !")
+
+        return self.model
+
+    def slice_infer(self, img, fast=False):
+        if fast:
+            return slice2Batch_detect(model=self.model.infer, img=img,
+                                      chip_size=min(img.shape[0], img.shape[1]) / 2 + 150,
+                                      slide_size=min(img.shape[0], img.shape[1]) / 2 + 1)
+        return self.model.infer(img)
+
 
 class myThread(threading.Thread):
     def __init__(self, func, args, out=False):
@@ -24,41 +70,6 @@ class myThread(threading.Thread):
             return self.result  # 如果子线程不使用join方法，此处可能会报没有self.result的错误
         except Exception:
             return None
-
-class ModelFactory(object): # Adaptor && Factory
-    def __init__(self):
-        self.fps = 0
-        self.model = None
-    def draw_detect_results(self,img):
-        if self.model is not None:
-            return self.model.draw_detect_results(img)
-
-    @classmethod
-    def build(self, string, args=()):
-        name = str.lower(string)
-        try:
-            if "rt" in name:
-                if "yolov5" in name:
-                    self.model = YoLov5TRT(args[1])
-                elif "yolov4" in name:
-                    self.model = YoLov4TRT(*args)
-                elif "yolov4" in name:
-                    self.model = YoLov3TRT(*args)
-            elif "dark" in name:
-                self.model = Darknet(*args)
-            else:
-                pass  # self.model = other(*args)
-                print("check again ")
-        except:
-            print("check again ")
-        return self.model
-
-    def slice_infer(self, img, fast=False):
-        if fast:
-            return slice2Batch_detect(model=self.model.infer, img=img,
-                                      chip_size=min(img.shape[0], img.shape[1]) / 2 + 150,
-                                      slide_size=min(img.shape[0], img.shape[1]) / 2 + 1)
-        return self.model.infer(img)
 
 def py_cpu_nms(dets, thresh):
     # dets:(m,5)  thresh:scaler
@@ -186,14 +197,18 @@ def slice2Batch_MulThreadDetect(model, img, slide_size, chip_size):  # for middl
     pass
 
 if __name__ == '__main__':
-    model = ModelFactory.build("darknet", ())
+    model = ModelFactory.build("darknet", ("/home/nvidia/pyCameraCD/data/yolov4_0.25.cfg",
+                                           "/home/nvidia/pyCameraCD/data/yolov4_0.25.weights",
+                                           "/home/nvidia/pyCameraCD/data/path.data"))
+    # model = ModelFactory.build("yolo_rt", ("/home/nvidia/pyCameraCD/data/yolo.engine","/home/nvidia/pyCameraCD/data/classes.names"))
     import cv2
 
-    img = cv2.imread("../resources/black.jpg")
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.imread("/home/nvidia/pyCameraCD/data/bin/1.jpg")
+    # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    result = model.detect_from_image(img)
+    result = model.draw_detect_results(img)
 
     cv2.namedWindow('title', cv2.WINDOW_NORMAL)
     cv2.imshow('title', result)
     k = cv2.waitKey(1)
+    model.destory()

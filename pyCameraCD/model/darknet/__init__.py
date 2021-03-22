@@ -1,3 +1,3 @@
 from .Darknet_Detector import Darknet
-
-__all__ = ["Darknet"]
+from .YOLOv3Detector import YOLODetector
+__all__ = ["Darknet","YOLODetector"]
