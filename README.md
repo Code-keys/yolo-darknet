@@ -1,14 +1,31 @@
-# updating...
+# updating... 
 
-c++ version!
+Aim to create a simple way to SPEED darknet on Nvidia-Device. 
 
-based 0n cuda 10.0 cudnn7.6.5 
-included teneorrt 7.0.0 and opencv 3.2.0 in our extra_lib.hpp
+# build hand by hand 
+    trt5.0- is for old trt-version
+    trt5.0+ is not
 
-Aim to create a simple way to SPEED darknet.
+    A class is coded to infer engine(only)
 
-FOR WINDOWS vs2015 OR UBUNTU1 18.04 
+    plugin is include in one folder 
 
-AUTO BUILD ENGINE BY CFG AND WEIGHTS !
+    Netframe is aim to build engine
+
+# API 算子
+    examples for build layer
+
+# Darknet
+    build engine from cfg && weights 
+
+# YOLO
 
 Thanks to tensorrtx project!
+
+# windows
+    FOR WINDOWS vs2015 <br> 
+
+<br>   
+
+<br>
+## 
