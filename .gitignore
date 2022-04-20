@@ -1,2 +1,10 @@
 
 MyGitHub - 快捷方式.lnk
+
+*.so
+*.dll
+*.cfg
+*.weights
+*.lib
+*.dylib
+*/.DS_Store

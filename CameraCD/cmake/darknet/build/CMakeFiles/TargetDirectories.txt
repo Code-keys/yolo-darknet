@@ -1,4 +1,0 @@
-/home/nvidia/CameraCD/cmake/darknet/build/CMakeFiles/rebuild_cache.dir
-/home/nvidia/CameraCD/cmake/darknet/build/CMakeFiles/dark.dir
-/home/nvidia/CameraCD/cmake/darknet/build/CMakeFiles/edit_cache.dir
-/home/nvidia/CameraCD/cmake/darknet/build/CMakeFiles/dark_autogen.dir

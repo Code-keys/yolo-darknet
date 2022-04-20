@@ -1,0 +1,14 @@
+<RCC>
+  <qresource >
+    <file>src/background.png</file>
+    <file>src/btn0.png</file>
+    <file>src/btn0.0.png</file>
+    <file>src/btn1.png</file>
+    <file>src/btn1.1.png</file>
+    <file>src/btn1.2.png</file>
+    <file>src/btn1.3.png</file>
+    <file>src/btn2.0.png</file>
+    <file>src/btn2.1.png</file>
+    <file>src/btn2.2.png</file>
+  </qresource>
+</RCC>
