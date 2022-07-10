@@ -1,33 +1,74 @@
-# updating...
+## <strong>updating...</strong>
+<ul>Aim to find a simple way to use all net-work by darknet. <br> 
 
-Aim to create a simple way to use all net by darknet.
+darknet with SiLU implemented in My another git as ' Darknet-plus ' <br> 
+</ul>
+
 #
-## yolov4 modified
+## <strong> yolo~v3 serial</strong>
 <details open>
-<summary> yolov4.cfg </summary>
-cut-channel prune<br> 
-cut-layer prune<br>
+<summary> scaled-yolov4 serial </summary>
+<ul>A implementation of scaled-yolov4 by darknet. including scaled-yolov4 p5、p6、p7、others.<br>
+</ul> 
 </details>
 
 #
-## scaled-yolov4.cfg
-A implementation of scaled-yolov4 using darknet. including scaled-yolov4 p5、p6、p7，CSP-my, CSP-official，tiny.<br>
-
-#
-## yolov4-tiny-spp.cfg
-
-#
-## yolov5.cfg 
+## <strong>yolov4 serial</strong>
 <details open>
-<summary> yolov5.cfg </summary>
-A implementation of yolov5 using darknet. including  s ,m ,l ,x .<br>  
+<summary> scaled-yolov4 serial </summary>
+<ul>A implementation of scaled-yolov4 by darknet. including scaled-yolov4 p5、p6、p7、others.<br>
+</ul> 
+</details>
+
+
+<details open>
+<summary> yolov4-tiny + SPP </summary> 
+</details> 
+
+
+## <strong>yolov5  serial</strong>
+<details open>
+<summary> ReadMe </summary> 
+<ul>
 A implementation of Ultralytics-yolov5 using darknet. including s m l x. <br>  
+version 2 is Done : <br>
+Merged two head-convs of the CSP to speed by group_id.<br>  
+version 4 is Done : <br>
 Replace the Focus() by conv with stride=2 and groups=3.<br>
-Merged two head-convs of the CSP to speed.<br>  
-created yolov5-tiny is better than yolov4-tiny: [paper url]<br>
-darknet with SiLU is implemented by  My another git named as ' darknet-plus ' <br> 
+my yolov5-tiny may be better than yolov4-tiny: [paper url] .<br>
+version 6 is Done :
+</ul>
 </details>
+
+#
+## <strong> yolov7 serial </strong>
+<details open>
+<summary> ReadMe </summary> 
+<ul> 
+<strong>Official  Official  Official  <br> </strong>
+yolov7x is Done ;
+<br>
+yolov7 is Done ;
+<br>
+yolov7-d6 is Done ;
+ <br>
+</ul>
+</details> 
+
+#
+## <strong> others serial </strong>
+<details open>
+<summary> ReadMe </summary> 
+<ul>  
+SAM attention is Done ;
+<br>
+CEM （SE） atttention is Done ;  
+</ul>
+</details> 
 
 # 
-## Thanks to correct my MisTakes！<br>  
-## copyright@all!
+## <strong>copyright</strong> 
+<details open>
+<summary> thanks </summary> 
+copyright@Code_keys and other official-ers !
+</details>
