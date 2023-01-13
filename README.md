@@ -9,7 +9,7 @@
 
 - The master branch is updating all version cfg files 
 - The Applications branch id built for real-usefully Deploy 
-- The v1.0-for-beginner branch is merged all version cfg files
+- The v1.0-for-beginner branch is for studing Darknet framework and add special layer, such as <a href="https://github.com/Code-keys/Darknet-plus">add-SiLU</a>
 - The v2.0-for-torch-prune branch is aim to apply prune on nets 
 - The v3.0-for-tensorrt-C+ branch is a tensorrt-auto-transfer for *.cfg 
 </details>
@@ -68,7 +68,7 @@ darknet with SiLU implemented can seen at My another git as ' Darknet-plus ' <br
 <summary> yolov8 Official </summary>  
 
 - yolov8s is Done ;
-- yolov8n yolov8m yolov8l yolov8x yolov8x6 to do ;
+- yolov8n yolov8m yolov8l yolov8x yolov8x6 are having done;
 </details> 
  
 ## <strong> others serial </strong>
