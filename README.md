@@ -7,7 +7,7 @@
 
   This project : YOLO-in-Darknet 🚀 is a project based on any YOLO-version <br>
 
-- The master branch is updating all version cfg files 
+- The master branch is updating all version cfg files
 - The Applications branch id built for real-usefully Deploy 
 - The v1.0-for-beginner branch is for studing Darknet framework and add special layer, such as <a href="https://github.com/Code-keys/Darknet-plus">add-SiLU</a>
 - The v2.0-for-torch-prune branch is aim to apply prune on nets 
@@ -53,7 +53,17 @@ darknet with SiLU implemented can seen at My another git as ' Darknet-plus ' <br
 - version 6 is Done :
  
 </details>
- 
+
+## <strong>yolov6  serial</strong>
+<details open>
+<summary> yolov6  Meituan </summary> 
+
+- A implementation of Meituan-yolov6 using darknet. only YOLOv6s-3.0. <br>  
+- Model demo for Deploy mode (Conv Bn fusioned )
+- Exchange Convolution to VGGRepBlock for traning, and fusion layer for Deploy.
+
+</details>
+
 ## <strong> yolov7 serial </strong>
 <details open>
 <summary> yolov7 Official </summary> 
@@ -67,8 +77,11 @@ darknet with SiLU implemented can seen at My another git as ' Darknet-plus ' <br
 <details open>
 <summary> yolov8 Official </summary>  
 
-- yolov8s is Done ;
-- yolov8n yolov8m yolov8l yolov8x yolov8x6 are having done;
+- yolov8s is Done;
+- yolov8n is Done ;
+- yolov8m is Done ;
+- yolov8l is Done ;
+- yolov8x is Done ;
 </details> 
  
 ## <strong> others serial </strong>
